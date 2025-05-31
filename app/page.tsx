@@ -1,102 +1,179 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Users, Target, TrendingUp, Shield } from "lucide-react";
+import Link from "next/link";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Navigation */}
+      <nav className="container mx-auto px-4 py-6">
+        <div className="flex items-center justify-between">
+          <div className="text-2xl font-bold text-blue-900">
+            BezHandlowca.pl
+          </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <Link href="#features" className="text-gray-700 hover:text-blue-900">
+              Funkcje
+            </Link>
+            <Link href="#pricing" className="text-gray-700 hover:text-blue-900">
+              Cennik
+            </Link>
+            <Link href="#contact" className="text-gray-700 hover:text-blue-900">
+              Kontakt
+            </Link>
+            <Button variant="outline" asChild>
+              <Link href="/login">Logowanie</Link>
+            </Button>
+            <Button asChild>
+              <Link href="/register">Rozpocznij za darmo</Link>
+            </Button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="container mx-auto px-4 py-20">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            Skaluj sprzedaż{" "}
+            <span className="text-blue-600">bez zatrudniania</span>{" "}
+            handlowców
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Zaawansowana platforma B2B oferująca outsourcing sprzedaży w modelu SaaS. 
+            Zwiększ przychody z profesjonalnym zespołem handlowym.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="text-lg px-8 py-4" asChild>
+              <Link href="/register">
+                Rozpocznij za darmo
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" className="text-lg px-8 py-4" asChild>
+              <Link href="#demo">
+                Zobacz demo
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Dlaczego BezHandlowca.pl?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Kompleksowe rozwiązanie dla firm, które chcą skalować sprzedaż 
+              bez inwestowania w własny zespół handlowy.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Profesjonalny zespół</h3>
+              <p className="text-gray-600">
+                Doświadczeni handlowcy z udokumentowanymi sukcesami w sprzedaży B2B
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Precyzyjny targeting</h3>
+              <p className="text-gray-600">
+                Zaawansowane narzędzia do identyfikacji i kwalifikacji potencjalnych klientów
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Mierzalne rezultaty</h3>
+              <p className="text-gray-600">
+                Transparentne raportowanie i analityka sprzedażowa w czasie rzeczywistym
+              </p>
+            </div>
+
+            <div className="text-center p-6">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Bezpieczeństwo</h3>
+              <p className="text-gray-600">
+                Pełna ochrona danych klientów zgodnie z RODO i najwyższymi standardami
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Gotowy na zwiększenie sprzedaży?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Dołącz do setek firm, które już korzystają z naszych usług 
+            i zwiększają swoje przychody o średnio 40%.
+          </p>
+          <Button size="lg" variant="secondary" className="text-lg px-8 py-4" asChild>
+            <Link href="/register">
+              Rozpocznij współpracę
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="text-2xl font-bold mb-4">BezHandlowca.pl</div>
+              <p className="text-gray-400">
+                Outsourcing sprzedaży B2B w modelu SaaS
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Produkt</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="#features">Funkcje</Link></li>
+                <li><Link href="#pricing">Cennik</Link></li>
+                <li><Link href="#demo">Demo</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Firma</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about">O nas</Link></li>
+                <li><Link href="/careers">Kariera</Link></li>
+                <li><Link href="/contact">Kontakt</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Wsparcie</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/help">Pomoc</Link></li>
+                <li><Link href="/privacy">Prywatność</Link></li>
+                <li><Link href="/terms">Regulamin</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 BezHandlowca.pl. Wszystkie prawa zastrzeżone.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
