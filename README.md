@@ -114,23 +114,6 @@ Aplikacja jest w pełni responsywna i zoptymalizowana dla:
 - Laptop (1024px+)
 - Tablet (768px+)
 - Mobile (320px+)
-
-## 🧪 Testowanie
-
-```bash
-# Testy jednostkowe
-npm run test
-
-# Testy integracyjne
-npm run test:integration
-
-# Testy E2E
-npm run test:e2e
-
-# Coverage
-npm run test:coverage
-```
-
 ## 📦 Deployment
 
 ### Vercel (Zalecane)
