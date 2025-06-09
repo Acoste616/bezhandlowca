@@ -229,4 +229,4 @@ W Vercel Dashboard dodaj wszystkie zmienne środowiskowe z pliku `.env.local`
 
 ### Problem: "Build Error"
 - Sprawdź czy wszystkie wymagane zmienne środowiskowe są ustawione
-- Uruchom `npm run build` lokalnie aby zidentyfikować błędy 
+- Uruchom `npm run build` lokalnie aby zidentyfikować błędy
