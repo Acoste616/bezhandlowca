@@ -118,7 +118,7 @@ Aplikacja jest w pełni responsywna i zoptymalizowana dla:
 ## 🧪 Testowanie
 
 ```bash
-# Testy jednostkowe
+# Testy jednostkowe (Vitest)
 npm run test
 
 # Testy integracyjne
