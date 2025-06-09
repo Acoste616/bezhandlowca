@@ -38,4 +38,4 @@ export async function createServerSupabaseClientWithTenant(tenantId?: string) {
   }
   
   return supabase
-} 
+}
