@@ -117,6 +117,8 @@ Aplikacja jest w pełni responsywna i zoptymalizowana dla:
 
 ## 🧪 Testowanie
 
+Testy jednostkowe uruchomisz komendą:
+
 ```bash
 # Testy jednostkowe
 npm run test
