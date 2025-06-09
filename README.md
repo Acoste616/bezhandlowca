@@ -65,11 +65,13 @@ npm install
 ```
 
 3. **Konfiguracja środowiska**
+
+Skopiuj plik `.env.example` do `.env.local` i wypełnij zmienne środowiskowe:
 ```bash
 cp .env.example .env.local
 ```
 
-Wypełnij zmienne środowiskowe:
+Następnie uzupełnij wartości:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
